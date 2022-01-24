@@ -59,7 +59,7 @@ export default function App() {
           <Outlet />
         </main>
         <ScrollRestoration />
-        <Scripts />
+        {/* <Scripts /> */}
         {process.env.NODE_ENV === "development" && <LiveReload />}
       </body>
     </html>
