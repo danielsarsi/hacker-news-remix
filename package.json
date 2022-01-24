@@ -5,6 +5,7 @@
   "license": "MIT",
   "author": "Daniel Sarsi Orta <daniel@sarsi.cc>",
   "sideEffects": false,
+  "repository": "https://github.com/danielsarsi/hacker-news-remix",
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
