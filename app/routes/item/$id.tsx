@@ -1,4 +1,4 @@
-import { LoaderFunction, useLoaderData } from "remix";
+import { LoaderFunction, MetaFunction, useLoaderData } from "remix";
 import HTMLParser from "~/components/HTMLParser";
 import ItemComment from "~/components/ItemComment";
 import ItemFooter from "~/components/ItemFooter";
@@ -24,6 +24,11 @@ export const loader: LoaderFunction = async ({ params }) => {
 
   return item;
 };
+
+export const meta: MetaFunction = ({ data }) => ({
+  title: `${data.title} / hacker news`,
+  description: `(${data.points}) by ${data.user}`,
+});
 
 const renderItemComment = (comments: Item[]) =>
   comments.map((comment) => (
