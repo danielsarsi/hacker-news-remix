@@ -1,4 +1,5 @@
-import { LoaderFunction, MetaFunction, redirect, useLoaderData } from "remix";
+import { LoaderFunction, MetaFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import ItemFooter from "~/components/ItemFooter";
 import ItemHeader from "~/components/ItemHeader";
 import { apiTopic, Story } from "~/lib/api";

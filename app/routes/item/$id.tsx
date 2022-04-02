@@ -1,4 +1,5 @@
-import { LoaderFunction, MetaFunction, useLoaderData } from "remix";
+import { LoaderFunction, MetaFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import HTMLParser from "~/components/HTMLParser";
 import ItemComment from "~/components/ItemComment";
 import ItemFooter from "~/components/ItemFooter";

@@ -1,4 +1,5 @@
-import { LoaderFunction, Outlet, redirect, useLoaderData } from "remix";
+import { LoaderFunction } from "@remix-run/node";
+import { Outlet, useLoaderData } from "@remix-run/react";
 import Pagination from "~/components/Pagination";
 import { apiEndpoints } from "~/lib/api";
 import { isValidNumber, isValidTopic } from "~/lib/utils";

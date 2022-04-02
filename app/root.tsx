@@ -1,13 +1,13 @@
-import { MetaFunction, useCatch } from "remix";
+import { MetaFunction, LinksFunction } from "@remix-run/node";
 import {
   Links,
-  LinksFunction,
   LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "remix";
+  useCatch,
+} from "@remix-run/react";
 import globalStyles from "~/styles/global.css";
 import LayoutHeader from "./components/LayoutHeader";
 
@@ -17,7 +17,11 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: globalStyles },
 ];
 
-export const meta: MetaFunction = () => ({ title: "hacker news" });
+export const meta: MetaFunction = () => ({
+  title: "hacker news",
+  charset: "utf-8",
+  viewport: "width=device-width, initial-scale=1",
+});
 
 export function CatchBoundary() {
   const caught = useCatch();
@@ -26,8 +30,6 @@ export function CatchBoundary() {
     <html>
       <head>
         <title>{caught.status} / hacker news</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
       </head>
@@ -48,8 +50,6 @@ export default function App() {
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
       </head>

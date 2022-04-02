@@ -1,4 +1,4 @@
-import { Link } from "remix";
+import { Link } from "@remix-run/react";
 import Circle from "~/components/Circle";
 import Nav from "~/components/Nav";
 
